@@ -3,6 +3,12 @@ import store
 
 
 def start(best_buy):
+    """
+    Starts the store menu interface for user interaction.
+
+    Args:
+        best_buy (Store): The store object containing products and inventory.
+    """
     while True:
         print("\n-------- Store Menu --------")
         print("1. List all products in store")
@@ -59,6 +65,9 @@ def start(best_buy):
 
 
 def main():
+    """
+    Initializes the store and starts the application.
+    """
     # Setup initial stock of inventory
     product_list = [
         products.Product("MacBook Air M2", price=1450, quantity=100),
