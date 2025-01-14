@@ -23,6 +23,8 @@ class Product:
     def set_quantity(self, quantity: int):
         """Sets the quantity of the product.
         Deactivates the product if the quantity reaches 0."""
+        if not isinstance(quantity, int):
+            raise TypeError("Quantity must be an integer.")
         if quantity < 0:
             raise ValueError("Quantity can't be negative")
         self.quantity = quantity
